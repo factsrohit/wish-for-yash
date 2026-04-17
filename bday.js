@@ -17,7 +17,7 @@ const MESSAGE_LINES = [
   },
   {
     text:  "I was wondering if I should act all cool and composed like usual… but today is special, so I'll be honest just this once.",
-    delay: 4800
+    delay: 3800
   },
   {
     text:  "I'm really, really glad you were born.",
