@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     
-    bgaudio.volume = 0.2;
+    bgaudio.volume = 0.18;
     bgaudio.currentTime = 0 ;
     const bgplayPromise = bgaudio.play();
     if (bgplayPromise !== undefined) {
