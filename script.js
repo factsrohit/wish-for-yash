@@ -6,7 +6,7 @@ const IMAGE_FILES = [
     'alisa-kujou-roshidere.gif',
     // add as many as you like...
 ];
-const PARTICLE_COUNT = 70;
+const PARTICLE_COUNT = 40;
 // ──────────────────────────────────────────────────────────
 
 const particleContainer = document.getElementById('particle-container');
@@ -31,7 +31,7 @@ function createParticle( a ) {
     img.style.objectFit = 'contain';
 
     particleContainer.appendChild(img);
-    console.log("created particle at zindex:",img.style.zIndex);
+    /*console.log("created particle at zindex:",img.style.zIndex);*/
     img.addEventListener('animationend', () => {
         img.remove();
         createParticle(a);

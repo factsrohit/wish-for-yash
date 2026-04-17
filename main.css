@@ -175,8 +175,8 @@ html, body { width: 100%; height: 100%; overflow: hidden; }
 .video-panel {
   position: relative;
   flex: 0 0 auto;
-  width: clamp(500px, 26vw, 340px);
-  height: clamp(320px, 58vh, 600px);
+  width: clamp(900px, 26vw, 900px);
+  height: clamp(520px, 58vh, 700px);
   border-radius: 22px;
   overflow: hidden;
   box-shadow:

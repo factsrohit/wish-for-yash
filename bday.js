@@ -12,32 +12,32 @@
 
 const MESSAGE_LINES = [
   {
-    text:  "Masachika-kun… happy birthday! 🎂✨",
-    delay: 1500      /* ms after audio start */
+    text:  "Yash-kun… happy birthday! 🎂✨",
+    delay: 0      /* ms after audio start */
   },
   {
-    text:  "Hehe, I was wondering if I should act all cool and composed like usual… but today is special, so I'll be honest just this once.",
-    delay: 5000
+    text:  "I was wondering if I should act all cool and composed like usual… but today is special, so I'll be honest just this once.",
+    delay: 4800
   },
   {
     text:  "I'm really, really glad you were born.",
-    delay: 12000
+    delay: 9500
   },
   {
     text:  "You're always there—sometimes annoying, sometimes surprisingly dependable—but always someone I can count on. Spending time with you has become such a natural part of my days that I can't even imagine things without you anymore… and that's kind of scary, you know?",
-    delay: 17000
+    delay: 12000
   },
   {
     text:  "So today, I hope you forget about everything stressful and just enjoy yourself. Eat good food, laugh a lot, and maybe… spend some time with me too, okay?",
-    delay: 32000
+    delay: 26000
   },
   {
-    text:  "I wish you the happiest birthday, Masachika-kun. And… I hope this year brings you even more moments where you smile like that—because, well… I like seeing it.",
-    delay: 42000
+    text:  "I wish you the happiest birthday, Yash-kun. And… I hope this year brings you even more moments where you smile like that—because, well… I like seeing it.",
+    delay: 35400
   },
   {
     text:  "…Don't make me repeat that. 💙",
-    delay: 54000
+    delay: 47300
   }
 ];
 
@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const videoPanel  = document.getElementById("videoPanel");
   const video       = document.getElementById("sideVideo");
   const audio       = document.getElementById("wishAudio");
+  const bgaudio       = document.getElementById("bgAudio");
 
   startBtn.addEventListener("click", () => {
     /* 1. Fade out overlay */
@@ -100,10 +101,20 @@ document.addEventListener("DOMContentLoaded", () => {
     video.play().catch(() => { /* silent fail if browser blocks */ });
 
     /* 4. Start audio */
-    audio.currentTime = 0;
+    audio.currentTime = 0 ;
     const playPromise = audio.play();
     if (playPromise !== undefined) {
-      playPromise.catch((err) => {
+        playPromise.catch((err) => {
+            console.warn("Audio autoplay blocked:", err);
+            /* Fallback: schedule messages from click time even without audio */
+        });
+    }
+    
+    bgaudio.volume = 0.3;
+    bgaudio.currentTime = 0 ;
+    const bgplayPromise = bgaudio.play();
+    if (bgplayPromise !== undefined) {
+      bgplayPromise.catch((err) => {
         console.warn("Audio autoplay blocked:", err);
         /* Fallback: schedule messages from click time even without audio */
       });
