@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Happy Birthday 🎂</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Raleway:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- ── Ambient background ── -->
+    <div class="background-container">
+      <div class="particle-box" id="particle-container"></div>
+    </div>
+    <div class="blurFilter"></div>
+
+    <!-- ── Start screen overlay ── -->
+    <div class="start-overlay" id="startOverlay">
+      <div class="start-card">
+        <p class="start-label">A message for you</p>
+        <h1 class="start-title">Happy Birthday,<br />Yash-kun 🎂</h1>
+        <button class="start-btn" id="startBtn">Open</button>
+        <p class="start-hint">🔊 Turn sound on for the full experience</p>
+      </div>
+    </div>
+
+    <!-- ── Main scene ── -->
+    <div class="scene" id="scene">
+
+      <!-- Side video panel -->
+      <div class="video-panel" id="videoPanel">
+        <div class="video-glow"></div>
+        <video
+          id="sideVideo"
+          class="side-video"
+          src="video.mp4"
+          loop
+          muted
+          playsinline
+        ></video>
+        <div class="video-overlay"></div>
+      </div>
+
+      <!-- Wish card -->
+      <div class="wish-card" id="wishCard">
+        <div class="card-header">
+          <span class="card-tag">✦ Birthday Wish ✦</span>
+        </div>
+
+        <div class="messages-container" id="messagesContainer">
+          <!-- Messages injected by JS -->
+        </div>
+
+        <div class="card-footer">
+          <span class="card-hearts">💙 · · ·</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hidden audio -->
+    <audio id="wishAudio" src="ed5.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+    <script src="bday.js"></script>
+  </body>
+</html>
