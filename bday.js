@@ -29,7 +29,7 @@ const MESSAGE_LINES = [
   },
   {
     text:  "So today, I hope you forget about everything stressful and just enjoy yourself. Eat good food, laugh a lot, and maybe… spend some time with me too, okay?",
-    delay: 26000
+    delay: 25500
   },
   {
     text:  "I wish you the happiest birthday, Yash-kun. And… I hope this year brings you even more moments where you smile like that—because, well… I like seeing it.",
